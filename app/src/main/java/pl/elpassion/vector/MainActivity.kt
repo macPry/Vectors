@@ -1,5 +1,6 @@
 package pl.elpassion.vector
 
+import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator.INFINITE
 import android.graphics.drawable.Animatable
@@ -24,10 +25,17 @@ class MainActivity : AppCompatActivity() {
         lineView.viewTreeObserver.addOnGlobalLayoutListener {
             lineView.setBackgroundColor(ContextCompat.getColor(this, R.color.colorAccent))
             val parentWidth = (lineView.parent as View).width
-            ObjectAnimator.ofFloat(lineView, "translationX", -parentWidth.toFloat(), parentWidth.toFloat()).apply {
-                duration = 2000
+            val objectAnimatorTranslationX = ObjectAnimator.ofFloat(lineView, "translationX", -parentWidth.toFloat(), parentWidth.toFloat()).apply {
+                duration = 1000
                 repeatCount = INFINITE
                 interpolator = AccelerateDecelerateInterpolator()
+            }
+            val objectAnimatorScaleX = ObjectAnimator.ofFloat(lineView, "scaleX", 1f, 0f).apply {
+                duration = 1000
+                repeatCount = INFINITE
+            }
+            AnimatorSet().apply {
+                playTogether(objectAnimatorTranslationX, objectAnimatorScaleX)
             }.start()
         }
     }
