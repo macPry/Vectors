@@ -12,7 +12,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        (image.drawable as? Animatable)?.start()
         (line.drawable as? Animatable)?.start()
 
         lineView.setBackgroundColor(ContextCompat.getColor(this, R.color.colorAccent))

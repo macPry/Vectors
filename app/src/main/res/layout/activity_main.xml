@@ -10,14 +10,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/v1animvector" />
 
         <android.support.v7.widget.CardView
             android:id="@+id/debateNeutralAnswerButton"
@@ -47,10 +42,10 @@
                 android:id="@+id/line"
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
-                android:scaleType="fitXY"
                 android:layout_gravity="bottom"
-                android:tint="@color/colorAccent"
-                android:src="@drawable/line_animated" />
+                android:scaleType="fitXY"
+                android:src="@drawable/line_animated"
+                android:tint="@color/colorAccent" />
 
         </android.support.v7.widget.CardView>
 
