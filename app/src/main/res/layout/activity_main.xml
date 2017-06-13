@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorPrimary"
-    android:id="@+id/root"
     tools:context="pl.elpassion.vector.MainActivity">
 
     <LinearLayout
@@ -30,7 +29,7 @@
                 android:id="@+id/lineView"
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
-                android:background="@android:color/black" />
+                android:background="@color/colorAccent" />
 
             <TextView
                 android:layout_width="match_parent"

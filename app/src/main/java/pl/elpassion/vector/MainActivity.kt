@@ -8,7 +8,6 @@ import android.animation.ValueAnimator.INFINITE
 import android.graphics.drawable.Animatable
 import android.os.Bundle
 import android.os.Handler
-import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
@@ -31,7 +30,6 @@ class MainActivity : AppCompatActivity() {
     fun init() {
         lineVectorAnimation?.start()
 
-        lineView.setBackgroundColor(ContextCompat.getColor(this, R.color.colorAccent))
         val parentWidth = (lineView.parent as View).width
         val objectAnimatorTranslationX = ObjectAnimator.ofFloat(lineView, "translationX", -parentWidth.toFloat(), parentWidth.toFloat()).apply {
             repeatCount = INFINITE
